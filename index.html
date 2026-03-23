@@ -9,65 +9,73 @@
 
 body{
 margin:0;
-background:black;
+font-family:Arial;
+color:white;
+overflow-x:hidden;
+}
+
+/* VIDEO BG */
+
+video{
+position:fixed;
+right:0;
+bottom:0;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+
+/* TOP */
+
+.top{
+background:rgba(0,0,0,0.6);
 text-align:center;
+padding:10px;
 }
 
-.bg{
-position:relative;
+.name{
+font-size:24px;
+font-weight:bold;
 }
 
-.bg img{
-width:100%;
+.tag{
+color:yellow;
 }
 
-/* BUTTONS */
+.phone{
+color:#00ffcc;
+}
+
+
+/* CARD */
+
+.card{
+background:rgba(0,0,0,0.7);
+margin:10px;
+border-radius:12px;
+padding:10px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.price{
+background:orange;
+padding:5px 10px;
+border-radius:8px;
+}
 
 .btn{
-position:absolute;
 background:green;
-color:white;
 padding:8px 12px;
 border-radius:8px;
+color:white;
 text-decoration:none;
-font-weight:bold;
-}
-
-/* bike button */
-.b1{
-top:42%;
-left:65%;
-}
-
-/* mini */
-.b2{
-top:58%;
-left:65%;
-}
-
-/* sedan */
-.b3{
-top:73%;
-left:65%;
-}
-
-/* suv */
-.b4{
-top:88%;
-left:65%;
-}
-
-/* phone */
-
-.call{
-position:absolute;
-top:8%;
-right:5%;
-background:yellow;
-padding:6px;
-border-radius:8px;
-color:black;
-font-weight:bold;
 }
 
 </style>
@@ -77,39 +85,95 @@ font-weight:bold;
 <body>
 
 
-<div class="bg">
+<!-- VIDEO -->
 
-<img src="poster.jpg">
-
-
-<a class="call"
-href="tel:9618532468">
-Call
-</a>
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-washing-a-car-5177/1080p.mp4" type="video/mp4">
+</video>
 
 
-<a class="btn b1"
-href="https://wa.me/919618532468">
-Book
-</a>
 
-<a class="btn b2"
-href="https://wa.me/919618532468">
-Book
-</a>
+<div class="top">
 
-<a class="btn b3"
-href="https://wa.me/919618532468">
-Book
-</a>
+<div class="name">
+Bobby Car & Bike Wash
+</div>
 
-<a class="btn b4"
-href="https://wa.me/919618532468">
-Book
-</a>
+<div class="tag">
+At Your Door Step - Vijayawada
+</div>
 
+<div class="phone">
+📞 9618532468
+</div>
 
 </div>
+
+
+
+<div class="card">
+
+<div class="row">
+Bike Wash
+<div class="price">₹50</div>
+</div>
+
+<a class="btn"
+href="https://wa.me/919618532468">
+Book Now
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="row">
+Mini Cars
+<div class="price">₹200</div>
+</div>
+
+<a class="btn"
+href="https://wa.me/919618532468">
+Book Now
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="row">
+Sedan Cars
+<div class="price">₹300</div>
+</div>
+
+<a class="btn"
+href="https://wa.me/919618532468">
+Book Now
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="row">
+SUV Vehicles
+<div class="price">₹400</div>
+</div>
+
+<a class="btn"
+href="https://wa.me/919618532468">
+Book Now
+</a>
+
+</div>
+
+
 
 </body>
 </html>
