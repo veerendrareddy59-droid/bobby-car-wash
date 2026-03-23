@@ -29,7 +29,12 @@ font-weight:bold;
 background:white;
 color:black;
 margin:15px;
-padding:15px;
+padding:10px;
+border-radius:10px;
+}
+
+img{
+width:100%;
 border-radius:10px;
 }
 
@@ -71,10 +76,26 @@ Car Wash
 </header>
 
 
-<div class="card">Bike ₹50</div>
-<div class="card">Mini ₹200</div>
-<div class="card">Sedan ₹300</div>
-<div class="card">SUV ₹400</div>
+<div class="card">
+<img src="https://i.imgur.com/1X6bG7C.jpg">
+<h3>Bike Wash ₹50</h3>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/0Z8FQ6O.jpg">
+<h3>Mini Car ₹200</h3>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/2nCt3Sbl.jpg">
+<h3>Sedan ₹300</h3>
+</div>
+
+<div class="card">
+<img src="https://i.imgur.com/YKQ9Q9x.jpg">
+<h3>SUV ₹400</h3>
+</div>
+
 
 
 <div class="form">
@@ -130,7 +151,6 @@ var url =
 window.open(url);
 
 }
-
 
 if ("serviceWorker" in navigator) {
 navigator.serviceWorker.register("service-worker.js");
