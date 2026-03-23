@@ -10,8 +10,11 @@
 body{
 margin:0;
 background:black;
-text-align:center;
+overflow:hidden;
+font-family:Arial;
 }
+
+/* BACKGROUND */
 
 .bg{
 position:relative;
@@ -21,7 +24,7 @@ position:relative;
 width:100%;
 }
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn{
 position:absolute;
@@ -33,31 +36,12 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* bike button */
-.b1{
-top:42%;
-left:65%;
-}
+/* BUTTON POSITIONS */
 
-/* mini */
-.b2{
-top:58%;
-left:65%;
-}
-
-/* sedan */
-.b3{
-top:73%;
-left:65%;
-}
-
-/* suv */
-.b4{
-top:88%;
-left:65%;
-}
-
-/* phone */
+.b1{ top:42%; left:65%; }
+.b2{ top:58%; left:65%; }
+.b3{ top:73%; left:65%; }
+.b4{ top:88%; left:65%; }
 
 .call{
 position:absolute;
@@ -70,6 +54,28 @@ color:black;
 font-weight:bold;
 }
 
+
+/* BUBBLES */
+
+.bubble{
+position:fixed;
+bottom:-100px;
+background:rgba(255,255,255,0.4);
+border-radius:50%;
+animation:rise 10s infinite;
+}
+
+@keyframes rise{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+
+.b1a{left:10%;width:20px;height:20px;}
+.b2a{left:30%;width:15px;height:15px;}
+.b3a{left:50%;width:25px;height:25px;}
+.b4a{left:70%;width:18px;height:18px;}
+.b5a{left:90%;width:22px;height:22px;}
+
 </style>
 
 </head>
@@ -79,14 +85,13 @@ font-weight:bold;
 
 <div class="bg">
 
-<img src="poster.jpg">
+<img src="https://veerendrareddy59-droid.github.io/bobby-car-wash/poster.jpg">
 
 
 <a class="call"
 href="tel:9618532468">
 Call
 </a>
-
 
 <a class="btn b1"
 href="https://wa.me/919618532468">
@@ -110,6 +115,14 @@ Book
 
 
 </div>
+
+
+<div class="bubble b1a"></div>
+<div class="bubble b2a"></div>
+<div class="bubble b3a"></div>
+<div class="bubble b4a"></div>
+<div class="bubble b5a"></div>
+
 
 </body>
 </html>
