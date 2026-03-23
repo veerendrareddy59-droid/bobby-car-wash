@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bobby Car Wash</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+text-align:center;
+}
+
+.bg{
+position:relative;
+}
+
+.bg img{
+width:100%;
+}
+
+/* BUTTONS */
+
+.btn{
+position:absolute;
+background:green;
+color:white;
+padding:8px 12px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* bike button */
+.b1{
+top:42%;
+left:65%;
+}
+
+/* mini */
+.b2{
+top:58%;
+left:65%;
+}
+
+/* sedan */
+.b3{
+top:73%;
+left:65%;
+}
+
+/* suv */
+.b4{
+top:88%;
+left:65%;
+}
+
+/* phone */
+
+.call{
+position:absolute;
+top:8%;
+right:5%;
+background:yellow;
+padding:6px;
+border-radius:8px;
+color:black;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="bg">
+
+<img src="poster.jpg">
+
+
+<a class="call"
+href="tel:9618532468">
+Call
+</a>
+
+
+<a class="btn b1"
+href="https://wa.me/919618532468">
+Book
+</a>
+
+<a class="btn b2"
+href="https://wa.me/919618532468">
+Book
+</a>
+
+<a class="btn b3"
+href="https://wa.me/919618532468">
+Book
+</a>
+
+<a class="btn b4"
+href="https://wa.me/919618532468">
+Book
+</a>
+
+
+</div>
+
+</body>
+</html>
