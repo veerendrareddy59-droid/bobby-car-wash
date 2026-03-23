@@ -5,76 +5,43 @@
 
 <title>Bobby Car Wash</title>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
 <style>
 
 body{
-margin:0;
-background:black;
-overflow:hidden;
 font-family:Arial;
+background:#0b3d91;
+color:white;
+text-align:center;
+margin:0;
 }
 
-/* BACKGROUND */
-
-.bg{
-position:relative;
+.top{
+background:#001a40;
+padding:10px;
 }
 
-.bg img{
-width:100%;
+.card{
+background:white;
+color:black;
+margin:10px;
+padding:10px;
+border-radius:10px;
 }
 
-/* BUTTON */
+input,select{
+width:90%;
+padding:10px;
+margin:5px;
+}
 
-.btn{
-position:absolute;
+button{
+padding:10px;
 background:green;
 color:white;
-padding:8px 12px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+border:none;
 }
-
-/* BUTTON POSITIONS */
-
-.b1{ top:42%; left:65%; }
-.b2{ top:58%; left:65%; }
-.b3{ top:73%; left:65%; }
-.b4{ top:88%; left:65%; }
-
-.call{
-position:absolute;
-top:8%;
-right:5%;
-background:yellow;
-padding:6px;
-border-radius:8px;
-color:black;
-font-weight:bold;
-}
-
-
-/* BUBBLES */
-
-.bubble{
-position:fixed;
-bottom:-100px;
-background:rgba(255,255,255,0.4);
-border-radius:50%;
-animation:rise 10s infinite;
-}
-
-@keyframes rise{
-0%{transform:translateY(0);}
-100%{transform:translateY(-100vh);}
-}
-
-.b1a{left:10%;width:20px;height:20px;}
-.b2a{left:30%;width:15px;height:15px;}
-.b3a{left:50%;width:25px;height:25px;}
-.b4a{left:70%;width:18px;height:18px;}
-.b5a{left:90%;width:22px;height:22px;}
 
 </style>
 
@@ -82,47 +49,83 @@ animation:rise 10s infinite;
 
 <body>
 
+<div class="top">
 
-<div class="bg">
+<h2>Bobby Car Wash</h2>
 
-<img src="https://veerendrareddy59-droid.github.io/bobby-car-wash/poster.jpg">
+<p>Vijayawada</p>
 
-
-<a class="call"
-href="tel:9618532468">
-Call
-</a>
-
-<a class="btn b1"
-href="https://wa.me/919618532468">
-Book
-</a>
-
-<a class="btn b2"
-href="https://wa.me/919618532468">
-Book
-</a>
-
-<a class="btn b3"
-href="https://wa.me/919618532468">
-Book
-</a>
-
-<a class="btn b4"
-href="https://wa.me/919618532468">
-Book
-</a>
-
+<p>9618532468</p>
 
 </div>
 
 
-<div class="bubble b1a"></div>
-<div class="bubble b2a"></div>
-<div class="bubble b3a"></div>
-<div class="bubble b4a"></div>
-<div class="bubble b5a"></div>
+<div class="card">
 
+<input id="name" placeholder="Name">
+
+<input id="phone" placeholder="Phone">
+
+<input id="address" placeholder="Address">
+
+<select id="service">
+<option>Bike</option>
+<option>Mini</option>
+<option>Sedan</option>
+<option>SUV</option>
+</select>
+
+<button onclick="saveBooking()">
+
+Book Service
+
+</button>
+
+</div>
+
+
+
+<script>
+
+const url =
+"https://ndaxaeixfokfkldccsob.supabase.co"
+
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kYXhhZWl4Zm9rZmtsZGNjc29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyNTk4NDQsImV4cCI6MjA4OTgzNTg0NH0.u22WXrKwg0o4n1cAxCvosg_4zlnpq08S_IQLf4ECubU"const key =
+
+
+
+const supabase =
+supabase.createClient(url,key)
+
+
+async function saveBooking(){
+
+let name =
+document.getElementById("name").value
+
+let phone =
+document.getElementById("phone").value
+
+let address =
+document.getElementById("address").value
+
+let service =
+document.getElementById("service").value
+
+let date =
+new Date().toLocaleString()
+
+await supabase
+.from("bookings")
+.insert([
+{name,phone,address,service,date}
+])
+
+alert("Booking Saved")
+
+}
+
+</script>
 
 </body>
 </html>
