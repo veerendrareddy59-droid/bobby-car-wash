@@ -1,101 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Bobby Car & Bike Wash</title>
-
-<link rel="manifest" href="manifest.json">
+<title>Bobby Car Wash</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:#0b3d91;
-color:white;
-}
-
-/* TOP BANNER */
-
-.top{
-background:#001a40;
-padding:10px;
+background:black;
 text-align:center;
 }
 
-.name{
-font-size:26px;
-font-weight:bold;
+.bg{
+position:relative;
 }
 
-.tag{
-color:yellow;
-}
-
-.phone{
-color:#00ffcc;
-}
-
-
-/* HERO */
-
-.hero img{
+.bg img{
 width:100%;
 }
 
-
-/* CARD */
-
-.card{
-background:white;
-color:black;
-margin:10px;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 3px 8px rgba(0,0,0,0.5);
-}
-
-.card img{
-width:100%;
-height:150px;
-object-fit:cover;
-}
-
-.row{
-display:flex;
-justify-content:space-between;
-padding:10px;
-align-items:center;
-}
-
-.price{
-background:orange;
-padding:5px 10px;
-border-radius:8px;
-font-weight:bold;
-}
+/* BUTTONS */
 
 .btn{
+position:absolute;
 background:green;
 color:white;
 padding:8px 12px;
 border-radius:8px;
 text-decoration:none;
+font-weight:bold;
 }
 
-
-/* PAYMENT */
-
-.pay{
-text-align:center;
-padding:10px;
+/* bike button */
+.b1{
+top:42%;
+left:65%;
 }
 
-.pay img{
-height:40px;
-margin:5px;
+/* mini */
+.b2{
+top:58%;
+left:65%;
+}
+
+/* sedan */
+.b3{
+top:73%;
+left:65%;
+}
+
+/* suv */
+.b4{
+top:88%;
+left:65%;
+}
+
+/* phone */
+
+.call{
+position:absolute;
+top:8%;
+right:5%;
+background:yellow;
+padding:6px;
+border-radius:8px;
+color:black;
+font-weight:bold;
 }
 
 </style>
@@ -105,135 +77,39 @@ margin:5px;
 <body>
 
 
-<div class="top">
+<div class="bg">
 
-<div class="name">
-Bobby Car & Bike Wash
-</div>
-
-<div class="tag">
-At Your Door Step
-</div>
-
-<div class="phone">
-📞 9618532468
-</div>
-
-</div>
+<img src="poster.jpg">
 
 
-<div class="hero">
-<img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0">
-</div>
-
-
-
-<!-- BIKE -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98">
-
-<div class="row">
-<div>Bike Wash</div>
-<div class="price">₹50</div>
-</div>
-
-<div class="row">
-<a class="btn"
-href="https://wa.me/919618532468">
-Book Now
+<a class="call"
+href="tel:9618532468">
+Call
 </a>
-</div>
-
-</div>
 
 
-
-<!-- MINI -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-
-<div class="row">
-<div>Mini Cars</div>
-<div class="price">₹200</div>
-</div>
-
-<div class="row">
-<a class="btn"
+<a class="btn b1"
 href="https://wa.me/919618532468">
-Book Now
+Book
 </a>
-</div>
 
-</div>
-
-
-
-<!-- SEDAN -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
-
-<div class="row">
-<div>Sedan Cars</div>
-<div class="price">₹300</div>
-</div>
-
-<div class="row">
-<a class="btn"
+<a class="btn b2"
 href="https://wa.me/919618532468">
-Book Now
+Book
 </a>
-</div>
 
-</div>
-
-
-
-<!-- SUV -->
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
-
-<div class="row">
-<div>SUV Vehicles</div>
-<div class="price">₹400</div>
-</div>
-
-<div class="row">
-<a class="btn"
+<a class="btn b3"
 href="https://wa.me/919618532468">
-Book Now
+Book
 </a>
-</div>
 
-</div>
+<a class="btn b4"
+href="https://wa.me/919618532468">
+Book
+</a>
 
-
-
-<div class="pay">
-
-<p>Payments Accepted</p>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Google_Pay_Logo.png">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/PhonePe_Logo.svg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Paytm_logo.png">
 
 </div>
-
-
-<script>
-if ("serviceWorker" in navigator) {
-navigator.serviceWorker.register("service-worker.js");
-}
-</script>
 
 </body>
 </html>
