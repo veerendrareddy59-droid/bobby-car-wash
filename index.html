@@ -25,36 +25,12 @@ font-size:22px;
 font-weight:bold;
 }
 
-.tag{
-color:yellow;
-font-size:14px;
-}
-
 .card{
 background:white;
 color:black;
 margin:15px;
 padding:15px;
 border-radius:10px;
-}
-
-.btn{
-display:block;
-margin:10px;
-padding:12px;
-background:green;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-size:16px;
-}
-
-input,select{
-width:90%;
-padding:10px;
-margin:8px;
-border-radius:6px;
-border:none;
 }
 
 .form{
@@ -65,6 +41,23 @@ padding:15px;
 border-radius:10px;
 }
 
+input,select{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:6px;
+border:1px solid gray;
+}
+
+button{
+padding:12px;
+background:green;
+color:white;
+border:none;
+border-radius:8px;
+width:90%;
+}
+
 </style>
 
 </head>
@@ -73,13 +66,13 @@ border-radius:10px;
 
 <header>
 Car Wash  
-<div class="tag">At Your Door Step</div>
-📞 9618532468
+<br>
+9618532468
 </header>
 
 
-<div class="card">Bike Wash ₹50</div>
-<div class="card">Mini Cars ₹200</div>
+<div class="card">Bike ₹50</div>
+<div class="card">Mini ₹200</div>
 <div class="card">Sedan ₹300</div>
 <div class="card">SUV ₹400</div>
 
@@ -88,40 +81,61 @@ Car Wash
 
 <h3>Book Service</h3>
 
-<input placeholder="Your Name">
+<input id="name" placeholder="Name">
 
-<input placeholder="Phone Number">
+<input id="phone" placeholder="Phone">
 
-<input placeholder="Address">
+<input id="address" placeholder="Address">
 
-<select>
+<select id="vehicle">
 <option>Bike</option>
 <option>Mini Car</option>
 <option>Sedan</option>
 <option>SUV</option>
 </select>
 
-<button class="btn">
+<button onclick="sendBooking()">
 Submit Booking
 </button>
 
 </div>
 
 
-<a class="btn" href="tel:9618532468">
-Call Now
-</a>
-
-<a class="btn"
-href="https://wa.me/919618532468">
-WhatsApp Booking
-</a>
-
-
 <script>
+
+function sendBooking(){
+
+var name =
+document.getElementById("name").value;
+
+var phone =
+document.getElementById("phone").value;
+
+var address =
+document.getElementById("address").value;
+
+var vehicle =
+document.getElementById("vehicle").value;
+
+var msg =
+"Car Wash Booking%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Address: "+address+"%0A"+
+"Vehicle: "+vehicle;
+
+var url =
+"https://wa.me/919618532468?text="+msg;
+
+window.open(url);
+
+}
+
+
 if ("serviceWorker" in navigator) {
 navigator.serviceWorker.register("service-worker.js");
 }
+
 </script>
 
 </body>
