@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bobby Car & Bike Wash</title>
+
+<link rel="manifest" href="manifest.json">
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#0b3d91;
+color:white;
+text-align:center;
+}
+
+header{
+background:#021f4d;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+}
+
+.tag{
+color:yellow;
+font-size:14px;
+}
+
+.card{
+background:white;
+color:black;
+margin:15px;
+padding:15px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+Bobby Car & Bike Wash  
+<div class="tag">At Your Door Step</div>
+<div>📞 9618532468</div>
+</header>
+
+<div class="card">
+<h2>Bike Wash</h2>
+₹50
+</div>
+
+<div class="card">
+<h2>Mini Cars</h2>
+Swift / Alto / Maruti ₹200
+</div>
+
+<div class="card">
+<h2>Sedan Cars</h2>
+Dzire / Etios / City ₹300
+</div>
+
+<div class="card">
+<h2>SUV Vehicles</h2>
+₹400
+</div>
+
+<script>
+if ("serviceWorker" in navigator) {
+navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
