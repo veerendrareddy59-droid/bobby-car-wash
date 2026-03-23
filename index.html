@@ -49,12 +49,20 @@ text-decoration:none;
 font-size:16px;
 }
 
-.call{
-background:#007bff;
+input,select{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:6px;
+border:none;
 }
 
-.wa{
-background:#25D366;
+.form{
+background:white;
+color:black;
+margin:15px;
+padding:15px;
+border-radius:10px;
 }
 
 </style>
@@ -70,37 +78,43 @@ Car Wash
 </header>
 
 
-<div class="card">
-<h2>Bike Wash</h2>
-₹50
+<div class="card">Bike Wash ₹50</div>
+<div class="card">Mini Cars ₹200</div>
+<div class="card">Sedan ₹300</div>
+<div class="card">SUV ₹400</div>
+
+
+<div class="form">
+
+<h3>Book Service</h3>
+
+<input placeholder="Your Name">
+
+<input placeholder="Phone Number">
+
+<input placeholder="Address">
+
+<select>
+<option>Bike</option>
+<option>Mini Car</option>
+<option>Sedan</option>
+<option>SUV</option>
+</select>
+
+<button class="btn">
+Submit Booking
+</button>
+
 </div>
 
-<div class="card">
-<h2>Mini Cars</h2>
-₹200
-</div>
 
-<div class="card">
-<h2>Sedan Cars</h2>
-₹300
-</div>
-
-<div class="card">
-<h2>SUV</h2>
-₹400
-</div>
-
-
-<a class="btn call" href="tel:9618532468">Call Now</a>
-
-<a class="btn wa"
-href="https://wa.me/919618532468">
-WhatsApp Booking
+<a class="btn" href="tel:9618532468">
+Call Now
 </a>
 
 <a class="btn"
-href="#">
-Book Service
+href="https://wa.me/919618532468">
+WhatsApp Booking
 </a>
 
 
