@@ -4,46 +4,79 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Car Wash</title>
+<title>Bobby Car Wash</title>
 
 <link rel="manifest" href="manifest.json">
 
 <style>
 
 body{
-font-family: Arial;
 margin:0;
-background:#0b3d91;
+font-family:Arial;
+background:linear-gradient(#0b3d91,#021f4d);
 color:white;
 text-align:center;
 }
 
+/* HEADER */
+
 header{
-background:#021f4d;
+background:#001a40;
 padding:15px;
-font-size:22px;
+}
+
+.name{
+font-size:26px;
 font-weight:bold;
 }
+
+.tag{
+color:yellow;
+font-size:14px;
+}
+
+.loc{
+color:#00ffcc;
+font-size:14px;
+}
+
+/* BANNER */
+
+.banner img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+/* CARD */
 
 .card{
 background:white;
 color:black;
 margin:15px;
-padding:10px;
-border-radius:10px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 8px rgba(0,0,0,0.4);
 }
 
-img{
+.card img{
 width:100%;
-border-radius:10px;
+height:140px;
+object-fit:cover;
 }
+
+.card h3{
+padding:10px;
+}
+
+/* FORM */
 
 .form{
 background:white;
 color:black;
 margin:15px;
 padding:15px;
-border-radius:10px;
+border-radius:12px;
 }
 
 input,select{
@@ -55,13 +88,29 @@ border:1px solid gray;
 }
 
 button{
+width:90%;
 padding:12px;
 background:green;
 color:white;
 border:none;
 border-radius:8px;
-width:90%;
+font-size:16px;
 }
+
+/* BUTTONS */
+
+.bar a{
+display:block;
+margin:8px;
+padding:12px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.call{background:#007bff;}
+.wa{background:#25D366;}
 
 </style>
 
@@ -69,30 +118,50 @@ width:90%;
 
 <body>
 
+
 <header>
-Car Wash  
-<br>
-9618532468
+
+<div class="name">
+Bobby Car Wash
+</div>
+
+<div class="tag">
+At Your Door Step
+</div>
+
+<div class="loc">
+Vijayawada, Andhra Pradesh
+</div>
+
+<div>
+📞 9618532468
+</div>
+
 </header>
 
 
+<div class="banner">
+<img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0">
+</div>
+
+
 <div class="card">
-<img src="https://i.imgur.com/1X6bG7C.jpg">
+<img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98">
 <h3>Bike Wash ₹50</h3>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/0Z8FQ6O.jpg">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
 <h3>Mini Car ₹200</h3>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/2nCt3Sbl.jpg">
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
 <h3>Sedan ₹300</h3>
 </div>
 
 <div class="card">
-<img src="https://i.imgur.com/YKQ9Q9x.jpg">
+<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
 <h3>SUV ₹400</h3>
 </div>
 
@@ -122,6 +191,21 @@ Submit Booking
 </div>
 
 
+<div class="bar">
+
+<a class="call" href="tel:9618532468">
+Call Now
+</a>
+
+<a class="wa"
+href="https://wa.me/919618532468">
+WhatsApp Booking
+</a>
+
+</div>
+
+
+
 <script>
 
 function sendBooking(){
@@ -139,7 +223,8 @@ var vehicle =
 document.getElementById("vehicle").value;
 
 var msg =
-"Car Wash Booking%0A"+
+"Bobby Car Wash Booking%0A"+
+"Location: Vijayawada%0A"+
 "Name: "+name+"%0A"+
 "Phone: "+phone+"%0A"+
 "Address: "+address+"%0A"+
