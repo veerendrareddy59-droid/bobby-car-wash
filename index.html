@@ -5,24 +5,23 @@
 
 <title>Bobby Car Wash</title>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
 
 body{
+margin:0;
 font-family:Arial;
 background:#0b3d91;
 color:white;
 text-align:center;
-margin:0;
 }
 
-.top{
-background:#001a40;
-padding:10px;
+h1{
+margin:10px;
 }
 
-.card{
+.box{
 background:white;
 color:black;
 margin:10px;
@@ -41,6 +40,7 @@ padding:10px;
 background:green;
 color:white;
 border:none;
+border-radius:8px;
 }
 
 </style>
@@ -49,18 +49,13 @@ border:none;
 
 <body>
 
-<div class="top">
-
-<h2>Bobby Car Wash</h2>
-
+<h1>Bobby Car Wash</h1>
 <p>Vijayawada</p>
-
 <p>9618532468</p>
 
-</div>
+<div class="box">
 
-
-<div class="card">
+<h3>Book Service</h3>
 
 <input id="name" placeholder="Name">
 
@@ -75,53 +70,46 @@ border:none;
 <option>SUV</option>
 </select>
 
-<button onclick="saveBooking()">
-
-Book Service
-
-</button>
+<button onclick="book()">Book Service</button>
 
 </div>
 
 
-
 <script>
 
-const url =
-"https://ndaxaeixfokfkldccsob.supabase.co"
+const supabase = window.supabase.createClient(
+"https://ndaxaeixfokfkldccsob.supabase.co",
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kYXhhZWl4Zm9rZmtsZGNjc29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyNTk4NDQsImV4cCI6MjA4OTgzNTg0NH0.u22WXrKwg0o4n1cAxCvosg_4zlnpq08S_IQLf4ECubU"
+);
 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kYXhhZWl4Zm9rZmtsZGNjc29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQyNTk4NDQsImV4cCI6MjA4OTgzNTg0NH0.u22WXrKwg0o4n1cAxCvosg_4zlnpq08S_IQLf4ECubU"const key =
+async function book(){
 
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let service=document.getElementById("service").value;
 
-
-const supabase =
-supabase.createClient(url,key)
-
-
-async function saveBooking(){
-
-let name =
-document.getElementById("name").value
-
-let phone =
-document.getElementById("phone").value
-
-let address =
-document.getElementById("address").value
-
-let service =
-document.getElementById("service").value
-
-let date =
-new Date().toLocaleString()
-
-await supabase
+const { data, error } = await supabase
 .from("bookings")
 .insert([
-{name,phone,address,service,date}
-])
+{
+name:name,
+phone:phone,
+address:address,
+service:service,
+date:new Date().toString()
+}
+]);
 
-alert("Booking Saved")
+if(error){
+
+alert("Error");
+
+}else{
+
+alert("Booking Saved");
+
+}
 
 }
 
