@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bobby Car & Bike Wash</title>
+<title>Car Wash</title>
 
 <link rel="manifest" href="manifest.json">
 
@@ -38,6 +38,25 @@ padding:15px;
 border-radius:10px;
 }
 
+.btn{
+display:block;
+margin:10px;
+padding:12px;
+background:green;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-size:16px;
+}
+
+.call{
+background:#007bff;
+}
+
+.wa{
+background:#25D366;
+}
+
 </style>
 
 </head>
@@ -45,10 +64,11 @@ border-radius:10px;
 <body>
 
 <header>
-Bobby Car & Bike Wash  
+Car Wash  
 <div class="tag">At Your Door Step</div>
-<div>📞 9618532468</div>
+📞 9618532468
 </header>
+
 
 <div class="card">
 <h2>Bike Wash</h2>
@@ -57,18 +77,32 @@ Bobby Car & Bike Wash
 
 <div class="card">
 <h2>Mini Cars</h2>
-Swift / Alto / Maruti ₹200
+₹200
 </div>
 
 <div class="card">
 <h2>Sedan Cars</h2>
-Dzire / Etios / City ₹300
+₹300
 </div>
 
 <div class="card">
-<h2>SUV Vehicles</h2>
+<h2>SUV</h2>
 ₹400
 </div>
+
+
+<a class="btn call" href="tel:9618532468">Call Now</a>
+
+<a class="btn wa"
+href="https://wa.me/919618532468">
+WhatsApp Booking
+</a>
+
+<a class="btn"
+href="#">
+Book Service
+</a>
+
 
 <script>
 if ("serviceWorker" in navigator) {
