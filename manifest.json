@@ -1,10 +1,11 @@
 {
-"name": "Bobby Car Wash",
-"short_name": "CarWash",
-"start_url": "index.html",
+"name": "Car Wash",
+"short_name": "Car Wash",
+"start_url": "./index.html",
 "display": "standalone",
 "background_color": "#0b3d91",
 "theme_color": "#0b3d91",
+"scope": "./",
 "icons": [
 {
 "src": "icon.png",

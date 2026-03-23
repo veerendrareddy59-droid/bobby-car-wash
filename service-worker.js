@@ -1,6 +1,5 @@
-self.addEventListener("install", function(e) {
-console.log("installed");
+self.addEventListener("install", e => {
+self.skipWaiting();
 });
 
-self.addEventListener("fetch", function(e) {
-});
+self.addEventListener("fetch", e => {});
